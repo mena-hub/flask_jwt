@@ -51,8 +51,8 @@ def unset_jwt():
 @fresh_jwt_required
 def account():
     username = get_jwt_identity()
-    csrf_token = (get_raw_jwt() or {}).get("csrf")
-    return render_template("frontend/account.html", csrf_token=csrf_token), 200
+    csrf_token = (get_raw_jwt() or {}).get("csrf") # !
+    return render_template("frontend/account.html", csrf_token=csrf_token), 200 # !
     # Very important account settings 
 
 @app.route('/services', methods=['GET'])
