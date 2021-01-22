@@ -25,6 +25,15 @@ def expired_token_callback(callback):
     unset_access_cookies(response)
     return response, 302
 
+@app.route('/token/refresh', methods=['GET'])
+@jwt_refresh_token_required
+def refresh():
+    user_id = get_jwt_identity()
+    access_token = create_access_token(identity=str(user_id))
+    response = make_response(redirect(app.config['BASE_URL'] + '/', 302))
+    set_access_cookies(response, access_token)
+    return response
+
 def assign_access_refresh_tokens(user_id, url):
     access_token = create_access_token(identity=str(user_id), fresh=True)
     refresh_token = create_refresh_token(identity=str(user_id))
