@@ -1,0 +1,16 @@
+{% extends "frontend/index.html" %}
+
+{% block content %}
+<form class="pb-2" action="http://127.0.0.1:5000/login" method="POST">
+    <input class="btn btn-outline-dark btn-block" type="submit" value="Iniciar sesión">
+</form>
+<form class="pb-2" action="http://127.0.0.1:5000/account" method="GET">
+    <input class="btn btn-outline-dark btn-block" type="submit" value="Ir a tu cuenta">
+</form>
+<form class="pb-2" action="http://127.0.0.1:5000/services" method="GET">
+    <input class="btn btn-outline-dark btn-block" type="submit" value="Ir a servicios">
+</form>
+<form class="pb-2" action="http://127.0.0.1:5000/logout" method="GET">
+    <input class="btn btn-outline-dark btn-block" type="submit" value="Cerrar sesión">
+</form>
+{% endblock %}
