@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='frontend/css/bootstrap.min.css') }}">
+</head>
+<body style="height: 100vh;">
+    <main class="d-table w-100 h-100 py-5" role="main">
+        <div class="container d-table-cell w-100 h-100 align-middle">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="border p-5">
+                        {% block content %} {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </main>  
+</body>
+</html>
