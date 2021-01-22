@@ -2,4 +2,8 @@
 
 {% block content %}
 <p class="text-center">Accediste a tu cuenta,<br>¡JWT (fresh) verificado!.</p>
+<form action="http://127.0.0.1:5000/account/change_settings" method="POST">
+    <input name="csrf_token" type="hidden" value="{{ csrf_token }}">
+    <button class="btn btn-outline-dark btn-block" type="submit">Configuración</button>
+</form>
 {% endblock %}
