@@ -1,0 +1,21 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, .h4, h5, h6, .h6, a, dt {
+    font-weight: 300;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+p {
+    font-size: 1.0rem;
+    line-height: 1.8rem;
+    font-weight: 300;
+}
+
+.list-group-item {
+    padding: .75rem 0;
+}
