@@ -1,5 +1,52 @@
 {% extends "frontend/index.html" %}
 
 {% block content %}
-<p class="text-center">Llegaste a la página de servicios,<br>¡JWT verificado!.</p>
+<main role="main">
+    <article class="text-dark mt-5 mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+                    <section>
+                        <div class="text-left">
+                            <h2>Estás en servicios</h2>
+                            <h6 class="text-muted">Tenés todo el tiempo del mundo, navegá</h6>
+                            <p class="py-4">The second endpoint, services can be accessed by either a fresh or non-fresh jwt. 
+                                A logged in user can access this for the entirety of their refresh token lifetime without logging in again.</p> 
+                            <dl class="row">
+                                <dt class="col-sm-3"><strong>Servicio uno</strong></dt>
+                                <dd class="col-sm-9"><span class="font-weight-light">Lorem ipsum dolor sit amet consectetur adipiscing elit, potenti justo arcu dui purus cursus.</span></dd>
+                                <dt class="col-sm-3"><strong>Servicio dos</strong></dt>
+                                <dd class="col-sm-9"><span class="font-weight-light">Lorem ipsum dolor sit amet consectetur adipiscing elit, potenti justo arcu dui purus cursus.</span></dd>
+                                <dt class="col-sm-3"><strong>Servicio tres</strong></dt>
+                                <dd class="col-sm-9"><span class="font-weight-light">Lorem ipsum dolor sit amet consectetur adipiscing elit, potenti justo arcu dui purus cursus.</span></dd>
+                            </dl>
+                            <div class="mt-4">
+                                <h4>Proyectemos</h4>
+                                <p class="h6 text-muted">Contactenos por: <a href="https://github.com/mena-hub/app_form_send" class="text-dark" target="_blank" rel="noopener noreferrer"><strong>Send Email</strong></a></p>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h3>Trabajos similares</h3>
+                            <div class="row mt-5">
+                                <div class="col-lg-4 col-md-4 mb-4">
+                                    <img src="{{ url_for('static', filename='img/project.png') }}" alt="">
+                                    <div class="py-3"><h5>Título uno</h5></div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 mb-4">
+                                    <img src="{{ url_for('static', filename='img/project.png') }}" alt="">
+                                    <div class="py-3"><h5>Título dos</h5></div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 mb-4">
+                                    <img src="{{ url_for('static', filename='img/project.png') }}" alt="">
+                                    <div class="py-3"><h5>Título tres</h5></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div><a class="lead text-dark" href="/">/inicio</a></div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </article>
+</main>
 {% endblock %}

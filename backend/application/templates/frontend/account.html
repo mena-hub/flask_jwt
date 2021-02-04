@@ -1,9 +1,57 @@
 {% extends "frontend/index.html" %}
 
 {% block content %}
-<p class="text-center">Accediste a tu cuenta,<br>¡JWT (fresh) verificado!.</p>
-<form action="http://127.0.0.1:5000/account/change_settings" method="POST">
-    <input name="csrf_token" type="hidden" value="{{ csrf_token }}">
-    <button class="btn btn-outline-dark btn-block" type="submit">Configuración</button>
-</form>
+<main role="main">
+    <article class="text-dark mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+                    <section>
+                        <div class="text-left">
+                            <h2>Estás en tu cuenta</h2>
+                            <h6 class="text-muted">00h: 00m: 02s para que el token expire</h6>
+                            <p class="py-4"> The first endpoint, account can only be accessed by a fresh jwt. 
+                                Someone who recently logged in will be able to access this as long as their fresh jwt does not expire. 
+                                When it does expire, the refresh token won't create a fresh jwt and hence to access this, the user will have to log in again.</p>
+                            <h6 class="text-muted">Sentite seguro</h6> 
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Cambiá el nombre de usuario</li>
+                                <li class="list-group-item">Cambiá la contraseña</li>
+                                <li class="list-group-item">Ver dispositivos logueados</li>
+                                <li class="list-group-item text-danger">Eliminar cuenta</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="text-dark mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+                    <section>
+                        <div class="text-left">
+                            <h2>RESTful API</h2>
+                            <h6 class="text-muted">Pasado el lapso de expiración, serás redirigido al inicio automáticamente</h6>
+                            <p class="py-4">Typically JWT is used with API servers using JSON payloads, often via AJAX. However you may have an endpoint that receives POST requests directly from an HTML form. 
+                                Without AJAX, you can’t set the CSRF headers to pass your token to the server. In this scenario you can send the token in a hidden form field 
+                                <a href="https://flask-jwt-extended.readthedocs.io/en/stable/tokens_in_cookies/" class="text-dark" target="_blank" rel="noopener noreferrer"><strong>[...]</strong></a>.</p>
+                        </div>
+                        <div class="d-flex">
+                            <div><a class="lead text-dark" href="/">/inicio</a></div>
+                            <div class="ml-auto">
+                                <form action="http://127.0.0.1:5000/account/change_settings" method="POST">
+                                    <input name="csrf_token" type="hidden" value="{{ csrf_token }}">
+                                    <button class="btn btn-outline-dark px-4" type="submit">Configuración</button>
+                                </form>
+                            </div>
+                        </div> 
+                    </section>
+                </div>
+            </div>
+        </div>
+    </article>
+</main>
 {% endblock %}
+

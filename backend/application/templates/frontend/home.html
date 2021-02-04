@@ -1,16 +1,63 @@
 {% extends "frontend/index.html" %}
 
 {% block content %}
-<form class="pb-2" action="http://127.0.0.1:5000/login" method="POST">
-    <input class="btn btn-outline-dark btn-block" type="submit" value="Iniciar sesión">
-</form>
-<form class="pb-2" action="http://127.0.0.1:5000/account" method="GET">
-    <input class="btn btn-outline-dark btn-block" type="submit" value="Ir a tu cuenta">
-</form>
-<form class="pb-2" action="http://127.0.0.1:5000/services" method="GET">
-    <input class="btn btn-outline-dark btn-block" type="submit" value="Ir a servicios">
-</form>
-<form class="pb-2" action="http://127.0.0.1:5000/logout" method="GET">
-    <input class="btn btn-outline-dark btn-block" type="submit" value="Cerrar sesión">
-</form>
+<main class="text-dark" role="main">
+    <section>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h4 class="lead pb-3">/login</h4>
+                    <form action="http://127.0.0.1:5000/login" method="POST">
+                        <input class="btn btn-outline-dark px-4" type="submit" value="Iniciar sesión">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="border-top">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h2 class="lead pb-3">/account</h2>
+                    <form action="http://127.0.0.1:5000/account" method="GET">
+                        <input class="btn btn-outline-dark px-4" type="submit" value="Ir a tu cuenta">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="border-top">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h2 class="lead pb-3">/services</h2>
+                    <form action="http://127.0.0.1:5000/services" method="GET">
+                        <input class="btn btn-outline-dark px-4" type="submit" value="Ir a servicios">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="border-top border-bottom">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h2 class="lead pb-3">/logout</h2>
+                    <form action="http://127.0.0.1:5000/logout" method="GET">
+                        <input class="btn btn-outline-dark px-4" type="submit" value="Cerrar sesión">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <a href="#" class="back-top lead text-dark"><h4>/volver</h4></a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 {% endblock %}
